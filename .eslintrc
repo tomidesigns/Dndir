@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jquery": false
+  },
+  "extends": ["eslint:recommended", "plugin:vue/essential", "prettier", "@vue/prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "linebreak-style": 0,
+    "vue/no-multiple-template-root": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js", "**/*.vue"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential",
+        "prettier",
+        "@vue/prettier"
+      ]
+    }
+  ]
+}
