@@ -12,7 +12,7 @@ const dndStore = useDndStore();
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-800">
+  <div class="bg-gray-800">
     <div class="bg-gray-900 border-solid border-b dark:border-gray-600">
       <div
         class="grid md:grid-rows-1 md:grid-cols-[100px_1fr] gap-4 md:gap-16 place-items-center justify-items-center max-w-5xl mx-auto p-6"
@@ -29,7 +29,7 @@ const dndStore = useDndStore();
       </div>
     </div>
 
-    <main>
+    <main class="min-h-screen">
       <section class="max-w-5xl grid grid-cols-1 justify-items-center m-auto p-6">
         <cardList v-if="dndStore.hasResults" />
         <responseError v-if="dndStore.hasError" />
@@ -37,5 +37,9 @@ const dndStore = useDndStore();
         <loader v-if="dndStore.isLoading" />
       </section>
     </main>
+
+    <footer class="flex justify-center p-5 bg-gray-900">
+      <p class="text-white">D&amp;D 5e API 0.1</p>
+    </footer>
   </div>
 </template>
