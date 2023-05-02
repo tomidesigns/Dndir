@@ -1,7 +1,7 @@
 <script setup>
 import { useDndStore } from 'vueStores/dnd-store';
 import icon from 'vueComponents/shared/svg-icon.vue';
-import search from 'vueComponents/shared/search-input.vue';
+import search from 'vueComponents/shared/search-field.vue';
 import cardList from 'vueComponents/card/card-list.vue';
 import paginationNav from 'vueComponents/shared/pagination-nav.vue';
 import loader from 'vueComponents/shared/loader-icon.vue';
@@ -19,9 +19,9 @@ const dndStore = useDndStore();
       >
         <header class="flex justify-center content-center py-4">
           <icon
+            :id="`dnd-logo`"
             class="inline w-24 fill-white"
             name="dnd-logo"
-            :id="`dnd-logo`"
             :text="`Welcome to Dungeons &amp; Dragons`"
           />
         </header>

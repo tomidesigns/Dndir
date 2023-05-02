@@ -6,7 +6,7 @@
     "browser": true,
     "jquery": false
   },
-  "extends": ["eslint:recommended", "plugin:vue/essential", "prettier", "@vue/prettier"],
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "prettier", "@vue/prettier"],
   "rules": {
     "prettier/prettier": "error",
     "linebreak-style": 0,
@@ -17,7 +17,7 @@
       "files": ["**/*.js", "**/*.vue"],
       "extends": [
         "eslint:recommended",
-        "plugin:vue/essential",
+        "plugin:vue/vue3-recommended",
         "prettier",
         "@vue/prettier"
       ]

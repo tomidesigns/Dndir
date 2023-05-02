@@ -25,7 +25,7 @@ export const useDndStore = defineStore('dndStore', {
       return state.loading !== false;
     },
     hasPagination(state) {
-      return state.results !== null && state.results.length > 10;
+      return state.results !== null && state.results.length > state.defaultPageSize;
     },
     formattedTerm(state) {
       return state.term.replace(/[\s]+/g, '-').toLowerCase();
