@@ -12,9 +12,7 @@ const props = defineProps({
 
 const baseUrl = 'https://www.dnd5eapi.co';
 
-const type = computed(() => props.dndData.attack_type);
 const title = computed(() => props.dndData.name);
-const desc = computed(() => props.dndData.description);
 const image = computed(() => baseUrl + props.dndData.image);
 </script>
 
@@ -46,14 +44,9 @@ const image = computed(() => baseUrl + props.dndData.image);
           :text="`${categoryName} icon`"
         />
       </div>
-      <span v-if="type" class="block uppercase tracking-wide text-sm text-violet-500 font-medium">{{
-        type
-      }}</span>
       <h3 class="mt-1 text-lg text-black font-pt text-center font-bold">
         {{ title }}
-        <span class="sr-only">Click item to find out more</span>
       </h3>
-      <p v-if="desc" class="mt-2 text-base text-slate-500">{{ desc }}</p>
     </div>
   </div>
 </template>

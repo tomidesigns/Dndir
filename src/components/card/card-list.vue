@@ -12,6 +12,6 @@ const dndStore = useDndStore();
     <cardItem v-for="item in dndStore.paginationData" :key="item.index" :dnd-data="item" />
   </div>
   <div v-else class="grid grid-cols-1 w-full">
-    <cardItemDetail v-for="item in dndStore.paginationData" :key="item.index" :dnd-data="item" />
+    <cardItemDetail :dnd-data="dndStore.results[0]" />
   </div>
 </template>
